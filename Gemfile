@@ -41,6 +41,7 @@ group :development, :test do
   gem 'mini_backtrace'
   gem 'guard-minitest'
   gem 'guard'
+  gem 'win32console'
 end
 
 group :development do
