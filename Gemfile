@@ -36,12 +36,11 @@ group :development, :test do
   gem 'byebug'
   gem 'spring'
   gem 'sqlite3'
-end
-
-group :test do
-	gem 'minitest-reporters'
-	gem 'mini_backtrace'
-	gem 'guard-minitest'
+  gem 'rspec'
+  gem 'minitest-reporters'
+  gem 'mini_backtrace'
+  gem 'guard-minitest'
+  gem 'guard'
 end
 
 group :development do
