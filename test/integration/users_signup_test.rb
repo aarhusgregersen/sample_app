@@ -9,7 +9,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
                                email: "user@invalid",
                                password:              "foo",
                                password_confirmation: "bar" }
-    end
+  end
     assert_template 'users/new'
   end
 
@@ -23,7 +23,6 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     end
     assert_template 'users/show'
     assert is_logged_in?
-
   end
   
 end
