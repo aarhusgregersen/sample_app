@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
 	validates :email, presence: true, format: { with: VALID_EMAIL_REGEX }, uniqueness: true
 	has_secure_password
 	validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
+  has_many :microposts, dependent: :destroy
 
 
 	def User.digest(string)
@@ -32,5 +33,9 @@ class User < ActiveRecord::Base
 
   def forget
   	update_attribute(:remember_digest, nil)
+  end
+
+  def feed
+    Micropost.where("user_id = ?", id)
   end
 end
